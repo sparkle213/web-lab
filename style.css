@@ -73,6 +73,7 @@ font-weight:700;
     cursor:pointer;
 
     transition:0.3s;
+    box-shadow:0 12px 35px rgba(255,170,210,.35);
 }
 
 .open-btn:hover{
