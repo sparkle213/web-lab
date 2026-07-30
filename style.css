@@ -78,29 +78,45 @@ font-weight:700;
 }
 
 .stars{
-    position:fixed;
-    inset:0;
-    background-image:
-    radial-gradient(white 1px, transparent 1px),
-    radial-gradient(white 1px, transparent 1px),
-    radial-gradient(#ffeaf3 1px, transparent 1px);
 
-    background-size:
-    120px 120px,
-    180px 180px,
-    250px 250px;
+position:absolute;
 
-    animation:twinkle 4s ease-in-out infinite;
-}
+top:0;
+left:0;
 
-@keyframes twinkle{
+width:100%;
+height:100%;
 
-0%,100%{
-opacity:.7;
-}
+background-image:
 
-50%{
-opacity:1;
+radial-gradient(circle,#ffffff 1px,transparent 1.5px),
+
+radial-gradient(circle,#fff7fb 1.5px,transparent 2px),
+
+radial-gradient(circle,#ffdbe9 1px,transparent 1.8px);
+
+background-size:
+
+120px 120px,
+
+200px 200px,
+
+300px 300px;
+
+background-position:
+
+0 0,
+
+60px 90px,
+
+150px 40px;
+
+animation:twinkle 4s ease-in-out infinite;
+
+opacity:.9;
+
+pointer-events:none;
+
 }
 
 }
