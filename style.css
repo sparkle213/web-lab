@@ -20,10 +20,19 @@ background-repeat: no-repeat;
 }
 
 .container{
-    text-align:center;
-    color:white;
-    position:relative;
-    z-index:2;
+
+text-align:center;
+color:white;
+position:relative;
+z-index:2;
+
+background:rgba(7,10,30,.18);
+backdrop-filter:blur(5px);
+
+padding:40px 28px;
+
+border-radius:32px;
+
 }
 
 .title{
