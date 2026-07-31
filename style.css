@@ -80,6 +80,52 @@ transform:scale(1);
 transform:scale(.93);
 
 }
+/* Fade animation */
+
+.fade-out{
+    opacity:0;
+    transition:opacity 0.8s ease;
+}
+
+/* Envelope Page */
+
+#envelopePage{
+    display:none;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+}
+
+.envelope{
+    font-size:90px;
+    animation:float 2.5s ease-in-out infinite;
+    cursor:pointer;
+}
+
+.tap-text{
+    margin-top:18px;
+    font-size:20px;
+    opacity:.85;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
 
 }
 
