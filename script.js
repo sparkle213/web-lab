@@ -27,8 +27,10 @@ openBtn.addEventListener("click", () => {
 });
 envelope.addEventListener("click", () => {
 
-    letter.style.display = "block";
+    envelope.style.display = "none";
 
-    envelope.style.transform = "scale(1.15)";
+    document.querySelector(".tap-text").style.display = "none";
+
+    letter.style.display = "flex";
 
 });
