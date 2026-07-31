@@ -1,7 +1,8 @@
 const openBtn = document.getElementById("openBtn");
 const container = document.querySelector(".container");
 const envelopePage = document.getElementById("envelopePage");
-
+const envelope = document.getElementById("envelope");
+const letter = document.getElementById("letter");
 openBtn.addEventListener("click", () => {
 
     // Button press effect
@@ -22,5 +23,12 @@ openBtn.addEventListener("click", () => {
         }, 800);
 
     }, 150);
+
+});
+envelope.addEventListener("click", () => {
+
+    letter.style.display = "block";
+
+    envelope.style.transform = "scale(1.15)";
 
 });
