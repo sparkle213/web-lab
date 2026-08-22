@@ -362,3 +362,11 @@ color:#444;
     background-repeat: repeat;
     background-size: 500px 500px;
 }
+/* MOBILE DOODLE LAYOUT */
+@media (max-width: 600px) {
+    #envelopePage {
+        background-size: 100% 360px;
+        background-position: center top;
+        background-repeat: repeat-y;
+    }
+}
