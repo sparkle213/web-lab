@@ -301,7 +301,12 @@ color:#444;
 
     box-shadow: none;
 }
-
+.heart-seal::before {
+    content: "♥";
+    font-family: Georgia, "Times New Roman", serif;
+    color: #f6c8c8;
+    font-size: 38px;
+}
 
 /* Open flap */
 .envelope-flap.open {
