@@ -318,3 +318,66 @@ color:#444;
     color: #9b8978;
     opacity: 0.9;
 }
+/* PAGE 2 — SOFT DOODLE DECOR */
+
+#envelopePage {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Doodle layer */
+#envelopePage::before {
+    content: "♡   ✦      ˚        ♡          ✧
+      ˚    ♡       ✧     ˚
+  ✦          ♡          ˚       ✦
+       ˚          ♡
+ ♡       ✧              ˚       ♡";
+
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+
+    padding: 45px;
+    white-space: pre-wrap;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 2.5;
+
+    color: #d9aeb8;
+    opacity: 0.42;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Small handwritten-style doodle curls */
+#envelopePage::after {
+    content: "〰      ♡      〰             ✦
+       ♡              〰
+  ✦          〰          ♡
+        〰       ✧";
+
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    font-size: 22px;
+    line-height: 3;
+
+    color: #aebfce;
+    opacity: 0.38;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep the actual envelope and text above the doodles */
+#envelopePage .envelope,
+#envelopePage .tap-text {
+    position: relative;
+    z-index: 2;
+}
