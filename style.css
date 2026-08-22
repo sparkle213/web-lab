@@ -302,9 +302,7 @@ color:#444;
     box-shadow: none;
 }
 
-.heart-seal::before {
-    content: "♥";
-}
+
 /* Open flap */
 .envelope-flap.open {
     transform: rotateX(180deg);
