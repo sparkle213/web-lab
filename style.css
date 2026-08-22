@@ -280,7 +280,31 @@ color:#444;
 }
 
 /* Cream heart on the flap */
+.heart-seal {
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    transform: translateX(-50%);
 
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+    color: #f6c8c8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+    z-index: 5;
+
+    box-shadow: none;
+}
+
+.heart-seal::before {
+    content: "♥";
+}
 /* Open flap */
 .envelope-flap.open {
     transform: rotateX(180deg);
