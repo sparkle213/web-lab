@@ -134,6 +134,7 @@ transform:scale(.93);
     100%{
         transform:translateY(0px);
     }
+    }
 #envelopePage{
     display:none;
     flex-direction:column;
