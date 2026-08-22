@@ -370,124 +370,63 @@ color:#444;
         background-repeat: repeat-y;
     }
 }
-/* PAGE 3 — HANDWRITTEN LETTER PAPER */
+.paper{
+    position:relative;
 
-.letter {
-    background: #f7f1e7 !important;
-    padding: 28px;
-    overflow: auto;
-}
+    max-width:650px;
+    width:90%;
+    padding:45px;
 
-/* The actual sheet */
-.letter .paper {
-    position: relative;
-    width: min(88%, 720px);
-    min-height: 82vh;
+    background-color:#fdf9f0;
 
-    background:
-        radial-gradient(circle at 20% 15%, rgba(220, 195, 175, 0.10), transparent 25%),
-        radial-gradient(circle at 80% 85%, rgba(220, 195, 175, 0.10), transparent 25%),
-        #fffaf2;
+    /* soft handmade paper texture */
+    background-image:
+        radial-gradient(rgba(120,100,80,.08) 0.7px, transparent 0.8px),
+        radial-gradient(rgba(160,140,120,.06) 0.7px, transparent 0.8px),
+        linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35));
 
-    border-radius: 4px 7px 5px 6px;
+    background-size:
+        5px 5px,
+        7px 7px,
+        100% 100%;
 
-    padding: 65px 70px;
-
-    box-shadow:
-        0 12px 35px rgba(80, 60, 45, 0.14);
-
-    overflow: hidden;
-
-    font-family: 'Cormorant Garamond', serif;
-    color: #51443d;
-}
-
-/* Soft irregular paper edge */
-.letter .paper::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    border: 2px solid rgba(205, 177, 165, 0.28);
-
-    clip-path: polygon(
-        1% 2%, 8% 1%, 17% 2%, 28% 1%, 39% 2%,
-        51% 1%, 63% 2%, 74% 1%, 87% 2%, 99% 1%,
-        98% 12%, 99% 25%, 98% 39%, 99% 53%,
-        98% 68%, 99% 82%, 98% 98%,
-        86% 97%, 73% 99%, 60% 98%, 46% 99%,
-        32% 98%, 18% 99%, 2% 97%,
-        3% 85%, 1% 71%, 2% 56%, 1% 42%,
-        2% 27%, 1% 14%
+    /* irregular handmade / torn edges */
+    clip-path:polygon(
+        2% 1%,
+        12% 2%,
+        23% 1%,
+        35% 2%,
+        48% 1%,
+        61% 2%,
+        74% 1%,
+        88% 2%,
+        98% 1%,
+        97% 13%,
+        99% 27%,
+        97% 41%,
+        99% 56%,
+        97% 72%,
+        99% 87%,
+        98% 99%,
+        86% 98%,
+        72% 99%,
+        58% 98%,
+        44% 100%,
+        30% 98%,
+        17% 99%,
+        2% 98%,
+        3% 86%,
+        1% 72%,
+        3% 57%,
+        1% 42%,
+        3% 27%,
+        1% 13%
     );
 
-    pointer-events: none;
-}
+    filter:drop-shadow(0 10px 25px rgba(80,65,50,.18));
 
-/* Top-left flower */
-.letter .paper::after {
-    content: "🌸";
-
-    position: absolute;
-    top: 18px;
-    left: 18px;
-
-    font-size: 62px;
-    opacity: 0.72;
-
-    transform: rotate(-12deg);
-
-    filter: saturate(0.65);
-    pointer-events: none;
-}
-
-/* Bottom-right flower */
-.letter .paper {
-    isolation: isolate;
-}
-
-.letter .paper > * {
-    position: relative;
-    z-index: 2;
-}
-
-/* Second flower using the heading area */
-.letter .paper h2::after {
-    content: "🌸";
-
-    position: absolute;
-    right: -38px;
-    bottom: -28px;
-
-    font-size: 58px;
-    opacity: 0.68;
-
-    transform: rotate(12deg);
-
-    filter: saturate(0.65);
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .letter {
-        padding: 16px;
-    }
-
-    .letter .paper {
-        width: 92%;
-        min-height: 88vh;
-        padding: 48px 28px;
-    }
-
-    .letter .paper::after {
-        font-size: 48px;
-        top: 12px;
-        left: 10px;
-    }
-
-    .letter .paper h2::after {
-        font-size: 45px;
-        right: -20px;
-        bottom: -22px;
-    }
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    line-height:1.8;
+    color:#444;
 }
