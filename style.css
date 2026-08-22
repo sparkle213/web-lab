@@ -202,78 +202,116 @@ color:#444;
 
 
 }
-/* DIY ENVELOPE */
+/* SOFT BLUE ENVELOPE */
 
 .envelope {
-    font-size: initial;
+    width: 330px;
+    height: 215px;
+    position: relative;
     cursor: pointer;
-    animation: none;
+    perspective: 1000px;
+    filter: drop-shadow(0 15px 22px rgba(70, 85, 100, 0.18));
 }
 
 .envelope-body {
     position: relative;
-    width: 260px;
-    height: 170px;
-    background: #dfe2e6;
-    border-radius: 8px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+    width: 100%;
+    height: 100%;
+    background: #aebfce;
+    border-radius: 12px;
     overflow: hidden;
 }
 
-.envelope-body::before,
-.envelope-body::after {
+/* Bottom envelope folds */
+.envelope-body::before {
     content: "";
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 0;
     height: 0;
     border-style: solid;
-}
-
-.envelope-body::before {
-    left: 0;
-    border-width: 85px 130px 0 0;
-    border-color: #cdd1d6 transparent transparent transparent;
+    border-width: 0 165px 125px 0;
+    border-color: transparent #a3b5c5 transparent transparent;
+    z-index: 1;
 }
 
 .envelope-body::after {
+    content: "";
+    position: absolute;
     right: 0;
-    border-width: 0 130px 85px 0;
-    border-color: transparent #cdd1d6 transparent transparent;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 125px 165px;
+    border-color: transparent transparent #a3b5c5 transparent;
+    z-index: 1;
 }
 
+/* Top triangular flap */
 .envelope-flap {
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 130px solid transparent;
-    border-right: 130px solid transparent;
-    border-top: 90px solid #eef0f2;
+
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-top: 125px solid #b8c9d8;
+
     transform-origin: top center;
-    transition: transform 0.6s ease;
-    z-index: 3;
+    transform: rotateX(0deg);
+    transition: transform 0.7s ease;
+    z-index: 4;
 }
 
+/* Slight inner edge on the flap */
+.envelope-flap::after {
+    content: "";
+    position: absolute;
+    left: -165px;
+    top: -125px;
+    width: 330px;
+    height: 125px;
+    border-top: 2px solid rgba(255,255,255,0.18);
+    pointer-events: none;
+}
+
+/* Cream heart on the flap */
 .heart-seal {
     position: absolute;
-    top: 67px;
+    top: 72px;
     left: 50%;
     transform: translateX(-50%);
-    width: 38px;
-    height: 38px;
-    background: #f4a6b8;
-    color: white;
-    border-radius: 50%;
+    z-index: 5;
+
+    width: 42px;
+    height: 42px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 23px;
-    z-index: 4;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+    font-size: 30px;
+    color: #f8dfbf;
+    text-shadow: 0 1px 2px rgba(70, 80, 90, 0.08);
+
+    pointer-events: none;
 }
 
+.heart-seal::before {
+    content: "♥";
+}
+
+/* Open flap */
 .envelope-flap.open {
     transform: rotateX(180deg);
+}
+
+/* Make the instruction match the soft aesthetic */
+.tap-text {
+    color: #9b8978;
+    opacity: 0.9;
 }
