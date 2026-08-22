@@ -31,6 +31,8 @@ envelope.addEventListener("click", () => {
 
     document.querySelector(".tap-text").style.display = "none";
 
+    envelopePage.style.display = "none";
+
     letter.style.display = "flex";
 
 });
