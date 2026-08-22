@@ -354,30 +354,11 @@ color:#444;
     z-index: 0;
 }
 
-/* Small handwritten-style doodle curls */
-#envelopePage::after {
-    content: "〰      ♡      〰             ✦
-       ♡              〰
-  ✦          〰          ♡
-        〰       ✧";
+/* SOFT HAND-DRAWN DOODLES */
 
-    position: absolute;
-    top: 20px;
-    right: 25px;
-
-    font-size: 22px;
-    line-height: 3;
-
-    color: #aebfce;
-    opacity: 0.38;
-
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Keep the actual envelope and text above the doodles */
-#envelopePage .envelope,
-#envelopePage .tap-text {
-    position: relative;
-    z-index: 2;
+#envelopePage {
+    background-color: #f8f2e7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Cg fill='none' stroke='%23d8aeb8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='.65'%3E%3Cpath d='M55 80c8-12 20-12 28 0 8-12 20-12 28 0 0 18-28 30-28 30S55 98 55 80z'/%3E%3Cpath d='M430 70l4 10 10 4-10 4-4 10-4-10-10-4 10-4z'/%3E%3Cpath d='M70 390c8-8 16-8 24 0 8 8 16 8 24 0'/%3E%3Cpath d='M410 400c0-15 12-27 27-27-15 0-27-12-27-27 0 15-12 27-27 27 15 0 27 12 27 27z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23aebfce' stroke-width='2' stroke-linecap='round' opacity='.7'%3E%3Cpath d='M115 170l3 8 8 3-8 3-3 8-3-8-8-3 8-3z'/%3E%3Cpath d='M385 170c6-9 18-9 24 0-6-3-12-3-24 0z'/%3E%3Cpath d='M100 300c6-12 20-12 26 0 6-12 20-12 26 0'/%3E%3Cpath d='M390 300l3 8 8 3-8 3-3 8-3-8-8-3 8-3z'/%3E%3C/g%3E%3Cg fill='%23d8aeb8' opacity='.55'%3E%3Ccircle cx='165' cy='85' r='3'/%3E%3Ccircle cx='340' cy='105' r='3'/%3E%3Ccircle cx='75' cy='235' r='3'/%3E%3Ccircle cx='425' cy='240' r='3'/%3E%3Ccircle cx='175' cy='425' r='3'/%3E%3Ccircle cx='335' cy='415' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 500px 500px;
 }
