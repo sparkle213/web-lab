@@ -27,12 +27,18 @@ openBtn.addEventListener("click", () => {
 });
 envelope.addEventListener("click", () => {
 
-    envelope.style.display = "none";
+    const flap = envelope.querySelector(".envelope-flap");
 
+    flap.classList.add("open");
 
+    setTimeout(() => {
 
-    envelopePage.style.display = "none";
+        envelope.style.display = "none";
 
-    letter.style.display = "flex";
+        envelopePage.style.display = "none";
+
+        letter.style.display = "flex";
+
+    }, 600);
 
 });
