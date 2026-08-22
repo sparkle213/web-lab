@@ -29,7 +29,7 @@ envelope.addEventListener("click", () => {
 
     envelope.style.display = "none";
 
-    document.querySelector(".tap-text").style.display = "none";
+
 
     envelopePage.style.display = "none";
 
