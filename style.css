@@ -372,25 +372,29 @@ color:#444;
 }
 .paper{
     position:relative;
+    overflow:visible;
 
     width:min(90%, 760px);
 min-height:680px;
 padding:70px 55px;
 box-sizing:border-box;
 
-    background-color:#fdf9f0;
+    background-color:#eef3f4;
 
-    /* soft handmade paper texture */
-    background-image:
-        radial-gradient(rgba(120,100,80,.08) 0.7px, transparent 0.8px),
-        radial-gradient(rgba(160,140,120,.06) 0.7px, transparent 0.8px),
-        linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35));
+/* soft textured handmade paper */
+background-image:
+    radial-gradient(rgba(90,105,110,.055) 0.8px, transparent 1px),
+    radial-gradient(rgba(255,255,255,.5) 1px, transparent 1.2px),
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.32),
+        rgba(210,220,222,.12)
+    );
 
-    background-size:
-        5px 5px,
-        7px 7px,
-        100% 100%;
-
+background-size:
+    6px 6px,
+    9px 9px,
+    100% 100%;
     /* irregular handmade / torn edges */
     clip-path:polygon(
         2% 1%,
@@ -424,7 +428,9 @@ box-sizing:border-box;
         1% 13%
     );
 
-    filter:drop-shadow(0 10px 25px rgba(80,65,50,.18));
+    filter:
+    drop-shadow(0 12px 18px rgba(70,80,85,.18))
+    drop-shadow(0 2px 3px rgba(50,60,65,.12));
 
     font-family:'Cormorant Garamond',serif;
     font-size:22px;
