@@ -372,30 +372,25 @@ color:#444;
 }
 .paper{
     position:relative;
-    overflow:visible;
 
-    width:min(90%, 760px);
-min-height:680px;
-padding:70px 55px;
-box-sizing:border-box;
+    max-width:650px;
+    width:90%;
+    padding:45px;
 
-    background-color:#eef3f4;
+    background-color:#f4f1f8;
 
-/* soft textured handmade paper */
-background-image:
-    radial-gradient(rgba(90,105,110,.055) 0.8px, transparent 1px),
-    radial-gradient(rgba(255,255,255,.5) 1px, transparent 1.2px),
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,.32),
-        rgba(210,220,222,.12)
-    );
+    /* subtle paper grain */
+    background-image:
+        radial-gradient(rgba(90,75,100,.055) 0.7px, transparent 0.9px),
+        radial-gradient(rgba(120,110,130,.035) 0.8px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.45), rgba(255,255,255,.45));
 
-background-size:
-    6px 6px,
-    9px 9px,
-    100% 100%;
-    /* irregular handmade / torn edges */
+    background-size:
+        5px 5px,
+        8px 8px,
+        100% 100%;
+
+    /* irregular torn edges */
     clip-path:polygon(
         2% 1%,
         12% 2%,
@@ -428,9 +423,10 @@ background-size:
         1% 13%
     );
 
+    /* actual depth */
     filter:
-    drop-shadow(0 12px 18px rgba(70,80,85,.18))
-    drop-shadow(0 2px 3px rgba(50,60,65,.12));
+        drop-shadow(0 12px 18px rgba(70,60,80,.18))
+        drop-shadow(0 2px 3px rgba(50,45,60,.12));
 
     font-family:'Cormorant Garamond',serif;
     font-size:22px;
