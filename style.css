@@ -373,9 +373,10 @@ color:#444;
 .paper{
     position:relative;
 
-    max-width:650px;
-    width:90%;
-    padding:45px;
+    width:min(90%, 760px);
+min-height:680px;
+padding:70px 55px;
+box-sizing:border-box;
 
     background-color:#fdf9f0;
 
